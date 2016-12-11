@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="type">
+<head>
+  <meta charset="UTF-8">
+  <title>Type App</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300,400italic">
+  <style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="logo">Olympic Games</h1>
+
+  <ul ng-controller="typeController as typeCtrl">
+    <li ng-repeat="type in typeCtrl.types">{{ type }}</li>
+  </ul>
+  <script src="dist/bundle.js"></script>
+</body>
+</html>
