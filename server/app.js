@@ -17,6 +17,13 @@ app.get("/types", (request, response) => {
     });
 });
 
+app.get("/cards", (request, response) => {
+    let cards = mongoUtil.cards();
+    cards.find({}, {"_id": false}).toArray((err, docs) => {
+        response.json(docs);
+    });
+});
+
 app.listen(8181, () => {
     console.log("Listening on 8181")
 });

@@ -17,11 +17,11 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
         templateUrl: 'cards/cards-nav.html',
         resolve: {
             cardsService: function cardsService($http) {
-                return $http.get('/types');
+                return $http.get('/cards');
             }
         },
         controller: function controller(cardsService) {
-            this.types = cardsService.data;
+            this.cards = cardsService.data;
         },
         controllerAs: 'typeCtrl'
     }).state('cards.typology', {
@@ -54,7 +54,7 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
 }).component('cardItem', {
     bindings: {
         name: '<',
-        description: '@?'
+        description: '<?'
     },
     controller: function controller() {
         this.message = "We are in cardItemController";

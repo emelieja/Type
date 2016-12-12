@@ -17,5 +17,8 @@ module.exports = {
     },
     types(){
         return _db.collection('types');
+    },
+    cards(){
+        return _db.collection('cards');
     }
 }

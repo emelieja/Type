@@ -11,11 +11,11 @@ angular.module('type', ["ui.router"])
             templateUrl: 'cards/cards-nav.html',
             resolve: {
                 cardsService: function ($http) {
-                    return $http.get('/types');
+                    return $http.get('/cards');
                 }
             },
             controller: function (cardsService) {
-                this.types = cardsService.data;
+                this.cards = cardsService.data;
             },
             controllerAs: 'typeCtrl'
         })
@@ -53,7 +53,7 @@ angular.module('type', ["ui.router"])
 .component('cardItem', {
     bindings: {
         name: '<',
-        description: '@?'
+        description: '<?'
     },
     controller: function() {
         this.message = "We are in cardItemController";

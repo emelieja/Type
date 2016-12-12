@@ -1,9 +1,9 @@
 <div class="container-fluid cards-container">
-    <div ng-repeat="type in typeCtrl.types" class="container col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <a ui-sref="cards.typology({typologyName : type})">
+    <div ng-repeat="card in typeCtrl.cards" class="container col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <a ui-sref="cards.typology({typologyName : card.name})">
             <card-item
-                    name="type"
-                    description="Hello">
+                    name="card.name"
+                    description="card.description">
             </card-item>
         </a>
     </div>
