@@ -53,7 +53,8 @@ angular.module('type', ["ui.router"])
 .component('cardItem', {
     bindings: {
         name: '<',
-        description: '<?'
+        description: '<?',
+        image: '<?'
     },
     controller: function() {
         this.message = "We are in cardItemController";

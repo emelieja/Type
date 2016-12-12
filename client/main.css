@@ -1,5 +1,8 @@
 .cards-container card-item {
   display: block;
   width: 100%;
-  background-color: orange;
+  padding: 16px;
+}
+.cards-container .card-item-container .card-image {
+  width: 100%;
 }

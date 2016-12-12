@@ -54,7 +54,8 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
 }).component('cardItem', {
     bindings: {
         name: '<',
-        description: '<?'
+        description: '<?',
+        image: '<?'
     },
     controller: function controller() {
         this.message = "We are in cardItemController";

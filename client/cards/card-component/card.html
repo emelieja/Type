@@ -1,5 +1,9 @@
-<div>
-    {{cardItemCtrl.message}}
-    {{cardItemCtrl.name}}
-    {{cardItemCtrl.description}}
+<div class="card-item-container">
+    <img class="card-image" ng-src="{{ cardItemCtrl.image }}">
+    <div class="card-title">
+        <span ng-bind="cardItemCtrl.name | uppercase"></span>
+    </div>
+    <div class="card-description">
+        <span ng-bind="cardItemCtrl.description"></span>
+    </div>
 </div>
