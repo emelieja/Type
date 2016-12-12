@@ -1,6 +1,10 @@
-<ul>
-    <li ng-repeat="type in typeCtrl.types">
-        <a ui-sref="cards.typology({typologyName : type})">{{ type }}</a></li>
-</ul>
+<div ng-repeat="type in typeCtrl.types">
+    <a ui-sref="cards.typology({typologyName : type})">
+        <card-item
+                name="type"
+                description="Hello">
+        </card-item>
+    </a>
+</div>
 
 <div ui-view></div>

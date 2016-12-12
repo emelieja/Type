@@ -50,3 +50,14 @@ angular.module('type', ["ui.router"])
             controllerAs: 'cardCtrl'
         })
 })
+.component('cardItem', {
+    bindings: {
+        name: '<',
+        description: '@?'
+    },
+    controller: function() {
+        this.message = "We are in cardItemController";
+    },
+    controllerAs: 'cardItemCtrl',
+    templateUrl: 'cards/card-component/card.html'
+})

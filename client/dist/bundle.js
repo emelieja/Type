@@ -51,6 +51,16 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
         },
         controllerAs: 'cardCtrl'
     });
+}).component('cardItem', {
+    bindings: {
+        name: '<',
+        description: '@?'
+    },
+    controller: function controller() {
+        this.message = "We are in cardItemController";
+    },
+    controllerAs: 'cardItemCtrl',
+    templateUrl: 'cards/card-component/card.html'
 });
 
 },{"angular":4,"angular-ui-router":2}],2:[function(require,module,exports){
