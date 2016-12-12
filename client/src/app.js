@@ -7,6 +7,7 @@ angular.module('type', ["ui.router"])
 
     $stateProvider
         .state('cards', {
+            abstract: true,
             url: '/cards',
             templateUrl: 'cards/cards-nav.html',
             resolve: {
@@ -18,6 +19,14 @@ angular.module('type', ["ui.router"])
                 this.cards = cardsService.data;
             },
             controllerAs: 'typeCtrl'
+        })
+        .state('cards.list', {
+            url: '',
+            templateUrl: 'cards/cards.html'
+        })
+        .state('cards.about', {
+            url: '/about',
+            templateUrl: 'about/about.html'
         })
         .state('cards.typology', {
             url: '/:typologyName',
