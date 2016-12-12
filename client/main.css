@@ -1,3 +1,11 @@
+.navigation {
+  text-align: center;
+}
+.navigation .nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
 .cards-container card-item {
   display: block;
   width: 100%;

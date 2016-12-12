@@ -1,17 +1,19 @@
-<h3>{{typoCtrl.card.name}} Typology</h3>
+<div class="container">
+    <h3 ng-bind="typoCtrl.card.name"></h3>
 
-<table class="table">
-    <thead>
+    <table class="table">
+        <thead>
         <th>Year</th>
         <th>Division</th>
         <th>Country</th>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         <tr ng-repeat="medal in typoCtrl.card.goldMedals">
             <td>{{medal.year}}</td>
             <td>{{medal.division}}</td>
             <td>{{medal.country}}</td>
         </tr>
-    </tbody>
-    </thead>
-</table>
+        </tbody>
+        </thead>
+    </table>
+</div>
