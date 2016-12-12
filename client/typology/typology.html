@@ -1,19 +1,21 @@
-<div class="container">
-    <h3 ng-bind="typoCtrl.card.name"></h3>
+<div class="container-fluid">
+    <div class="content-container">
+        <h3 ng-bind="typoCtrl.card.name"></h3>
 
-    <table class="table">
-        <thead>
-        <th>Year</th>
-        <th>Division</th>
-        <th>Country</th>
-        </thead>
-        <tbody>
-        <tr ng-repeat="medal in typoCtrl.card.goldMedals">
-            <td>{{medal.year}}</td>
-            <td>{{medal.division}}</td>
-            <td>{{medal.country}}</td>
-        </tr>
-        </tbody>
-        </thead>
-    </table>
+        <table class="table">
+            <thead>
+            <th>Year</th>
+            <th>Division</th>
+            <th>Country</th>
+            </thead>
+            <tbody>
+            <tr ng-repeat="medal in typoCtrl.card.goldMedals">
+                <td>{{medal.year}}</td>
+                <td>{{medal.division}}</td>
+                <td>{{medal.country}}</td>
+            </tr>
+            </tbody>
+            </thead>
+        </table>
+    </div>
 </div>

@@ -1,5 +1,6 @@
 .navigation {
   text-align: center;
+  margin-bottom: 32px;
 }
 .navigation .nav {
   display: inline-block;
@@ -9,7 +10,7 @@
 .cards-container card-item {
   display: block;
   width: 100%;
-  padding: 16px;
+  padding: 15px;
 }
 .cards-container .card-image {
   width: 100%;
@@ -26,4 +27,10 @@
   background-color: #eee;
   color: #555;
   border-radius: 4px;
+}
+.content-container {
+  padding: 15px 30px;
+}
+.content-container h3 {
+  margin-top: 0;
 }
