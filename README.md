@@ -1,6 +1,11 @@
 # Type app
 
-MEAN stack app
+* Node
+* Express
+* MongoDB
+* AngularJS
+* ECMA6
+* Bootstrap
 
 # Developing
 
