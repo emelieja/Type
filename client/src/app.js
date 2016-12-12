@@ -9,7 +9,7 @@ angular.module('type', ["ui.router"])
         .state('cards', {
             abstract: true,
             url: '/cards',
-            templateUrl: 'cards/cards-nav.html',
+            templateUrl: 'cards/cards.html',
             resolve: {
                 cardsService: function ($http) {
                     return $http.get('/cards');
@@ -22,7 +22,7 @@ angular.module('type', ["ui.router"])
         })
         .state('cards.list', {
             url: '',
-            templateUrl: 'cards/cards.html'
+            templateUrl: 'cards/list/list.html'
         })
         .state('cards.about', {
             url: '/about',
@@ -30,7 +30,7 @@ angular.module('type', ["ui.router"])
         })
         .state('cards.typology', {
             url: '/:typologyName',
-            templateUrl: 'cards/cards-typology.html',
+            templateUrl: 'typology/typology.html',
             resolve: {
                 cardService: function ($q) {
                     return $q((resolve, reject) => {
@@ -56,7 +56,7 @@ angular.module('type', ["ui.router"])
             controller: function(cardService) {
                 this.card = cardService.data;
             },
-            controllerAs: 'cardCtrl'
+            controllerAs: 'typoCtrl'
         })
 })
 .component('cardItem', {
@@ -69,5 +69,5 @@ angular.module('type', ["ui.router"])
         this.message = "We are in cardItemController";
     },
     controllerAs: 'cardItemCtrl',
-    templateUrl: 'cards/card-component/card.html'
+    templateUrl: 'cards/card/card.html'
 })

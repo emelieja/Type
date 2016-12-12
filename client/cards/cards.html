@@ -1,12 +1,17 @@
-<div class="container-fluid cards-container">
-    <div ng-repeat="card in typeCtrl.cards"
-         class="container col-xs-6 col-sm-4 col-md-4 col-lg-3">
-        <a ui-sref="cards.typology({typologyName : card.name})">
-            <card-item
-                    name="card.name"
-                    description="card.description"
-                    image="card.image">
-            </card-item>
+<ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a ui-sref="cards.about">About</a></li>
+    <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Typology <span class="caret"></span>
         </a>
-    </div>
-</div>
+        <ul class="dropdown-menu">
+            <li ng-repeat="card in typeCtrl.cards">
+                <a ui-sref="cards.typology({typologyName : card.name})"
+                   ng-bind="card.name"></a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div ui-view></div>

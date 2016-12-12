@@ -15,7 +15,7 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
     $stateProvider.state('cards', {
         abstract: true,
         url: '/cards',
-        templateUrl: 'cards/cards-nav.html',
+        templateUrl: 'cards/cards.html',
         resolve: {
             cardsService: function cardsService($http) {
                 return $http.get('/cards');
@@ -27,13 +27,13 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
         controllerAs: 'typeCtrl'
     }).state('cards.list', {
         url: '',
-        templateUrl: 'cards/cards.html'
+        templateUrl: 'cards/list/list.html'
     }).state('cards.about', {
         url: '/about',
         templateUrl: 'about/about.html'
     }).state('cards.typology', {
         url: '/:typologyName',
-        templateUrl: 'cards/cards-typology.html',
+        templateUrl: 'typology/typology.html',
         resolve: {
             cardService: function cardService($q) {
                 return $q(function (resolve, reject) {
@@ -56,7 +56,7 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
         controller: function controller(cardService) {
             this.card = cardService.data;
         },
-        controllerAs: 'cardCtrl'
+        controllerAs: 'typoCtrl'
     });
 }).component('cardItem', {
     bindings: {
@@ -68,7 +68,7 @@ _angular2.default.module('type', ["ui.router"]).config(function ($stateProvider,
         this.message = "We are in cardItemController";
     },
     controllerAs: 'cardItemCtrl',
-    templateUrl: 'cards/card-component/card.html'
+    templateUrl: 'cards/card/card.html'
 });
 
 },{"angular":4,"angular-ui-router":2}],2:[function(require,module,exports){
