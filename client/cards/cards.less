@@ -5,9 +5,25 @@
     padding: 16px;
   }
 
-  .card-item-container {
-    .card-image {
-      width: 100%;
+  .card-image {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+  }
+
+  .card-link {
+    &:hover {
+      text-decoration: none;
+
+      .card-title {
+        background-color: #eee;
+        color: #555;
+        border-radius: 4px;
+      }
     }
   }
 }

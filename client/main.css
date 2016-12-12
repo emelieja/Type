@@ -3,6 +3,19 @@
   width: 100%;
   padding: 16px;
 }
-.cards-container .card-item-container .card-image {
+.cards-container .card-image {
   width: 100%;
+}
+.cards-container .card-title {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+.cards-container .card-link:hover {
+  text-decoration: none;
+}
+.cards-container .card-link:hover .card-title {
+  background-color: #eee;
+  color: #555;
+  border-radius: 4px;
 }
