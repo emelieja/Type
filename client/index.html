@@ -13,9 +13,8 @@
 <body>
   <h1 class="logo">Olympic Games</h1>
 
-  <ul ng-controller="typeController as typeCtrl">
-    <li ng-repeat="type in typeCtrl.types">{{ type }}</li>
-  </ul>
+  <div ui-view></div>
+
   <script src="dist/bundle.js"></script>
 </body>
 </html>
