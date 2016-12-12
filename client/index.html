@@ -15,9 +15,25 @@
 </head>
 <body>
   <div class="jumbotron">
-    <h1>Type me</h1>
-    <p>Your local typology universe</p>
+    <h1 class="text-center">Type me</h1>
+    <p class="text-center">Your local typology universe</p>
   </div>
+
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">About</a></li>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Typology <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Enneagram</a></li>
+        <li><a href="#">Myers-Briggs</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">General</a></li>
+      </ul>
+    </li>
+  </ul>
 
   <div ui-view></div>
 
